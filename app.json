@@ -1,39 +1,27 @@
 {
   "expo": {
-    "name": "Sign Speak",
-    "slug": "sign-speak-zm",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "name": "SignSpeak ZM",
+    "slug": "signspeak-zm",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#0B5FFF" },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTabletMode": true,
-      "bundleIdentifier": "com.signspeak.zm"
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "SignSpeak uses the camera to read sign language gestures.",
+        "NSMicrophoneUsageDescription": "Not used for recording audio, only required by camera module.",
+        "NSBluetoothAlwaysUsageDescription": "SignSpeak connects to a Bluetooth speaker to play translated speech out loud."
+      }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.signspeak.zm"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.signspeak.zm",
+      "permissions": ["CAMERA", "BLUETOOTH", "BLUETOOTH_CONNECT", "RECORD_AUDIO"]
     },
     "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow Sign Speak to access your camera to translate sign language."
-        }
-      ],
-      [
-        "expo-media-library",
-        {
-          "photosPermission": "Allow Sign Speak to access your photos.",
-          "savePhotosPermission": "Allow Sign Speak to save photos."
-        }
-      ]
+      ["expo-camera", { "cameraPermission": "SignSpeak uses the camera to read sign language gestures." }]
     ]
   }
-}
+    }
