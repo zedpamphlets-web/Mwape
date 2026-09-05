@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Sign Speak",
+    "slug": "sign-speak-zm",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.signspeak.zm"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.signspeak.zm"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Sign Speak to access your camera to translate sign language."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Sign Speak to access your photos.",
+          "savePhotosPermission": "Allow Sign Speak to save photos."
+        }
+      ]
+    ]
+  }
+}
